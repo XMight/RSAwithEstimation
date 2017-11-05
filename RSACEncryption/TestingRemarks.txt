@@ -1,0 +1,19 @@
+﻿// AMERICAN DATE TIME FORMAT MM/DD/YYYY
+
+
+//-----------------------------------------------------------------------
+02/01/2011:
+1. Tested generation of 4096 key. Waited for 30 minutes, no generation result.
+2. Tested generation of 2048 key. Instable results. During many Debug launches, no key was generated at all,
+waiting for more than 10 minutes with no result. RabinMillerTest quitting in last for cycle, for the first confidence cycle. 
+During other Debug sessions, a 1024 prime generated in less than a minute. No explanation why this may happen. 
+
+//-----------------------------------------------------------------------
+Visible results between multi-threaded Enc/Dec and Single-threaded are in the case
+of keys bigger than 1024 bits
+
+on 01/30/2011 testing encryption of 524 bytes file, the results:
+1. Single-threaded encryption: 4 minutes 7 seconds
+2. Multi-threaded encryption, 2 threads: 2 minutes 43 seconds
+
+Testing machine: AMD Athlon x2 QL-64 2.1 Ghz, 4 Gb RAM, Windows 7 32 bit. Yes, laptop!
